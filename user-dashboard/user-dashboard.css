@@ -217,11 +217,11 @@ body {
     color: var(--blue-magenta);
 }
 .profile-names h3 {
-    color: white;
-    font-size: 1.2rem;
+  color: white;
+  font-size: 1.2rem;
 }
 .profile-names h4 {
-    color: var(--light-purple);
+  color: var(--light-purple);
 }
 
 .container {
