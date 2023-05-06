@@ -38,13 +38,14 @@
       "id": 1,
       "taskName": "Login",
       "taskDescription": "Texte explicatif qui dit en quoi consiste ce projet qui dure depuis plus de 2 ans",
-      "taskDate": "3/3/2023"
+      "taskDate": "2023-03-04",
+      "assignTo": "2"
     },
     {
       "taskName": "Navbar",
       "taskDescription": "3ertfghh",
-      "taskDate": "2023-05-09T00:00:00.000Z",
-      "assignTo": "1",
+      "taskDate": "2023-05-09",
+      "assignTo": "3",
       "id": 3
     },
     {
@@ -57,98 +58,84 @@
     {
       "taskName": "footer",
       "taskDescription": "Texte explicatif qui dit en quoi consiste ce projet qui dure depuis plus de 2 ans",
-      "taskDate": "2023-05-24T00:00:00.000Z",
+      "taskDate": "2023-05-24",
       "assignTo": "1",
       "id": 6
     },
     {
-      "taskName": "home page",
-      "taskDescription": "translatudfghjkvbnmfghjcvbn",
-      "taskDate": null,
-      "assignTo": "1",
-      "id": 4
-    },
-    {
-      "taskName": "home page",
-      "taskDescription": "translatudfghjkvbnmfghjcvbn",
-      "taskDate": null,
-      "assignTo": "1",
-      "id": 4
-    },
-    {
       "taskName": "fghj",
       "taskDescription": "gsyahcsk scsusc usgwcusc ",
-      "taskDate": "2023-05-21T00:00:00.000Z",
+      "taskDate": "2023-05-21",
       "assignTo": "1",
       "id": 8
     },
     {
       "taskName": "fghj",
       "taskDescription": "gsyahcsk scsusc usgwcusc ",
-      "taskDate": "2023-05-21T00:00:00.000Z",
+      "taskDate": "2023-05-21",
       "assignTo": "1",
       "id": 8
     },
     {
       "taskName": "fghj",
       "taskDescription": "gsyahcsk scsusc usgwcusc ",
-      "taskDate": "2023-05-21T00:00:00.000Z",
+      "taskDate": "2023-05-21",
       "assignTo": "1",
       "id": 8
     },
     {
       "taskName": "fghj",
       "taskDescription": "gsyahcsk scsusc usgwcusc ",
-      "taskDate": "2023-05-21T00:00:00.000Z",
+      "taskDate": "2023-05-21",
       "assignTo": "1",
       "id": 8
     },
     {
       "taskName": "fghj",
       "taskDescription": "gsyahcsk scsusc usgwcusc ",
-      "taskDate": "2023-05-21T00:00:00.000Z",
+      "taskDate": "2023-05-21",
       "assignTo": "1",
       "id": 8
     },
     {
       "taskName": "fghj",
       "taskDescription": "gsyahcsk scsusc usgwcusc ",
-      "taskDate": "2023-05-21T00:00:00.000Z",
+      "taskDate": "2023-05-21",
       "assignTo": "1",
       "id": 8
     },
     {
       "taskName": "fghj",
       "taskDescription": "gsyahcsk scsusc usgwcusc ",
-      "taskDate": "2023-05-21T00:00:00.000Z",
+      "taskDate": "2023-05-21",
       "assignTo": "1",
       "id": 8
     },
     {
       "taskName": "refg",
       "taskDescription": "fghgjh",
-      "taskDate": "2023-05-22T00:00:00.000Z",
+      "taskDate": "2023-05-22",
       "assignTo": "1",
       "id": 9
     },
     {
       "taskName": "egrethtrj",
       "taskDescription": "qewetjt wrjtjfg",
-      "taskDate": "2023-05-04T00:00:00.000Z",
+      "taskDate": "2023-05-04",
       "assignTo": "1",
       "id": 10
     },
     {
       "taskName": "werghjk",
       "taskDescription": "sdfghjkl",
-      "taskDate": "2023-05-23T00:00:00.000Z",
+      "taskDate": "2023-05-23",
       "assignTo": "4",
       "id": 11
     },
     {
       "taskName": "Navbar",
       "taskDescription": "ul;",
-      "taskDate": "2023-06-02T00:00:00.000Z",
+      "taskDate": "2023-06-02",
       "assignTo": "4",
       "id": 12
     }
