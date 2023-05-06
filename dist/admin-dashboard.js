@@ -48,7 +48,7 @@ class TaskForm {
     getUser() {
         const taskName = this.taskNameInput.value;
         const taskDescription = this.taskDescriptionInput.value;
-        const taskDate = new Date(this.taskDateInput.value);
+        const taskDate = this.taskDateInput.value;
         const assignTo = this.assignToSelect.value;
         return {
             taskName,
@@ -92,16 +92,22 @@ ${alltask.taskDescription}        </p>
             app.innerHTML = html;
         });
     }
-    // async updateTask(id: number) {
-    //   const response = await fetch(`http://localhost:3000/tasks/${id}`);
-    //   const tasc = (await response.json()) as task;
-    //   TaskForm.prepopulate(tasc);
-    // }
     updateTask(id) {
         return __awaiter(this, void 0, void 0, function* () {
-            const response = yield fetch(`http://localhost:3000/tasks/${id}`);
-            const tasc = yield response.json();
-            console.log(tasc);
+            // const response = await fetch(`http://localhost:3000/tasks/${id}`);
+            // const tasc = await response.json();
+            // updateModal.addEventListener("click", async function () {
+            const form = new TaskForm();
+            const addedTask = form.getUser();
+            yield fetch(`http://localhost:3000/photos/${id}`, {
+                method: "PATCH",
+                body: JSON.stringify(addedTask),
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            });
+            // }
+            // );
         });
     }
     static prepopulate(id) {
@@ -118,9 +124,6 @@ ${alltask.taskDescription}        </p>
                 tasc.taskDate.toString();
             document.querySelector("#users").value =
                 tasc.assignTo.toString();
-            // (document.querySelector("#image") as HTMLInputElement).value = photo.url;
-            // (document.getElementById("addBtn")! as HTMLButtonElement).innerText =
-            //   "Update Photo";
         });
     }
 }
