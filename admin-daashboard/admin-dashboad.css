@@ -457,3 +457,11 @@ form button {
   margin-left: auto;
   cursor: pointer;
 }
+.update-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.update-icons img {
+  cursor: pointer;
+}
