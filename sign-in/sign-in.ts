@@ -1,5 +1,4 @@
 interface UserLogin {
-    id: number;
     email: string;
     password: string;
 }
@@ -50,7 +49,6 @@ class LoginForm {
         const password = this.passwordInput.value;
 
         return {
-            id: 0,
             email,
             password,
         };
@@ -65,15 +63,30 @@ const loginUser = async () => {
     if (user) {
         const users = (await (
             await fetch('http://localhost:3000/users')
-        ).json()) as UserLogin[];
+        ).json()) as UserSignUp[];
 
-        const matchedUser = users.find(
+        const matchedUser: UserSignUp | undefined= users.find(
             (u) => u.email === user.email && u.password === user.password
         );
 
         if (matchedUser) {
-            console.log('Logged in as:', matchedUser.email);
-            window.location.href = '../user-dashboard/user-dashboard.html';
+            if (matchedUser.type === 'admin') {
+                console.log(matchedUser);
+                console.log('Logged in as:', matchedUser.email);
+                window.location.href = '../admin-dashboard/admin-dashboard.html';
+                history.replaceState(
+                    null,
+                    '',
+                    '../admin-dashboard/admin-dashboard.html'
+                );
+            } else {
+                window.location.href = '../user-dashboard/user-dashboard.html';
+                history.replaceState(
+                    null,
+                    '',
+                    '../user-dashboard/user-dashboard.html'
+                );
+            }
         } else {
             const mismatched = document.querySelector(
                 '.mismatched'

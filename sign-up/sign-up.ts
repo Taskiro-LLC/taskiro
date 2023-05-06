@@ -100,13 +100,13 @@ const createUser = async () => {
     const user = form.getUser();
 
     if (user) {
-        console.log(user);
+        window.location.href = '../sign-in/sign-in.html';
         await fetch('http://localhost:3000/users', {
             method: 'POST',
             body: JSON.stringify(user),
             headers: {
                 'Content-Type': 'application/json',
-            },
+            }
         });
     }
 };

@@ -1,28 +1,36 @@
 {
   "users": [
     {
-      "name": "sssss",
-      "email": "ssssssss",
-      "password": "aaaaaaaaa",
+      "name": "Samuel Kiprop",
+      "email": "sam.kiprop23@gmail.com",
+      "password": "123123",
       "type": "admin",
       "engaged": false,
       "id": 1
     },
     {
-      "name": "aaaaaaaaaaaaaa",
-      "email": "aaaaaaaaaaaaaaaaaa",
-      "password": "123123",
+      "name": "aaaaaaaa",
+      "email": "ppppp",
+      "password": "pppppppppp",
       "type": "user",
       "engaged": false,
       "id": 2
     },
     {
-      "name": "aweSAM-XS",
-      "email": "samsamsamsam",
-      "password": "123123",
-      "type": "admin",
+      "name": "aaaaaaaaaaaaa",
+      "email": "ssssssssssss",
+      "password": "ssss",
+      "type": "user",
       "engaged": false,
       "id": 3
+    },
+    {
+      "name": "aweSAM-XS",
+      "email": "aaaaaaaa",
+      "password": "aaaa",
+      "type": "user",
+      "engaged": false,
+      "id": 4
     }
   ]
 }
