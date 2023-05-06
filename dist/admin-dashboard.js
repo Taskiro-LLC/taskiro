@@ -8,6 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+<<<<<<< HEAD
 const modal = document.querySelector(".modal");
 const closeModal = document.querySelector("#closeModal");
 const openModal = document.querySelector(".addProject");
@@ -20,6 +21,13 @@ openModal.addEventListener("click", function () {
     modal.style.display = "flex";
     updateModal.style.display = "none";
     btn.style.display = "block";
+=======
+const openModal = document.querySelector("#addProject");
+const modal = document.querySelector(".modal");
+const closeModal = document.querySelector("#closeModal");
+openModal.addEventListener("click", function () {
+    modal.style.display = "flex";
+>>>>>>> f0183ac (add admin dashboard functionality)
 });
 closeModal.addEventListener("click", function () {
     modal.style.display = "none";
@@ -29,6 +37,7 @@ window.addEventListener("click", function (e) {
         modal.style.display = "none";
     }
 });
+<<<<<<< HEAD
 function modalUpdate() {
     btn.style.display = "none";
     updateModal.style.display = "block";
@@ -43,16 +52,26 @@ class TaskForm {
     static deleteBtnTask() {
         throw new Error("Method not implemented.");
     }
+=======
+class TaskForm {
+>>>>>>> f0183ac (add admin dashboard functionality)
     constructor() {
         this.taskNameInput = document.querySelector("#taskName");
         this.taskDescriptionInput = document.querySelector("#description");
         this.taskDateInput = document.querySelector("#date");
         this.assignToSelect = document.querySelector("#users");
     }
+<<<<<<< HEAD
     getTask() {
         const taskName = this.taskNameInput.value;
         const taskDescription = this.taskDescriptionInput.value;
         const taskDate = this.taskDateInput.value;
+=======
+    getUser() {
+        const taskName = this.taskNameInput.value;
+        const taskDescription = this.taskDescriptionInput.value;
+        const taskDate = new Date(this.taskDateInput.value);
+>>>>>>> f0183ac (add admin dashboard functionality)
         const assignTo = this.assignToSelect.value;
         return {
             taskName,
@@ -67,6 +86,10 @@ class TaskForm {
             const allTask = (yield response.json());
             let html = "";
             allTask.forEach((alltask) => {
+<<<<<<< HEAD
+=======
+                console.log(alltask);
+>>>>>>> f0183ac (add admin dashboard functionality)
                 html += `
       <div class="project-card">
       <div class="card-text">
@@ -83,12 +106,17 @@ ${alltask.taskDescription}        </p>
             src="../Assets/images/logo.png"
             alt=""
           />
+<<<<<<< HEAD
           <div class="update-icons">
           <img id="deleteBtn" onClick="TaskForm.deleteTask(${alltask.id})"  src="../Assets/icons/trash.svg" alt="" />
           <img id="projectUpdate" onClick="TaskForm.prepopulate(${alltask.id})
           " width="20" height="20" src="../Assets/icons/edit-task.png" alt="" />
             </div>
           </div>
+=======
+          <img src="../Assets/icons/ellipsis.svg" alt="" />
+        </div>
+>>>>>>> f0183ac (add admin dashboard functionality)
       </div>
     </div>
        `;
@@ -97,6 +125,7 @@ ${alltask.taskDescription}        </p>
             app.innerHTML = html;
         });
     }
+<<<<<<< HEAD
     static deleteTask(id) {
         return __awaiter(this, void 0, void 0, function* () {
             yield fetch(`http://localhost:3000/tasks/${id}`, {
@@ -154,6 +183,12 @@ updateModal.addEventListener("click", () => {
 const createTask = () => __awaiter(void 0, void 0, void 0, function* () {
     const form = new TaskForm();
     const addedTask = form.getTask();
+=======
+}
+const createTask = () => __awaiter(void 0, void 0, void 0, function* () {
+    const form = new TaskForm();
+    const addedTask = form.getUser();
+>>>>>>> f0183ac (add admin dashboard functionality)
     console.log(addedTask);
     yield fetch("http://localhost:3000/tasks", {
         method: "POST",
@@ -163,7 +198,15 @@ const createTask = () => __awaiter(void 0, void 0, void 0, function* () {
         },
     });
 });
+<<<<<<< HEAD
 btn.addEventListener("click", createTask);
 const myTask = new TaskForm();
 myTask.getTask();
+=======
+const btn = document.querySelector("#addbtn");
+btn.addEventListener("click", createTask);
+// console.log(user); // { name: 'John Doe', email: 'john.doe@example.com', password: 'password123', type: 'admin' }
+const myTask = new TaskForm();
+myTask.getUser();
+>>>>>>> f0183ac (add admin dashboard functionality)
 myTask.showTask();

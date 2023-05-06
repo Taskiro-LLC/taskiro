@@ -457,6 +457,7 @@ form button {
   margin-left: auto;
   cursor: pointer;
 }
+<<<<<<< HEAD
 .update-icons {
   display: flex;
   justify-content: center;
@@ -465,3 +466,5 @@ form button {
 .update-icons img {
   cursor: pointer;
 }
+=======
+>>>>>>> f0183ac (add admin dashboard functionality)
