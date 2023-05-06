@@ -8,10 +8,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-const openModal = document.querySelector("#addProject");
 const modal = document.querySelector(".modal");
 const closeModal = document.querySelector("#closeModal");
+const openModal = document.querySelector(".addProject");
+const updateModal = document.querySelector("#updatebtn");
 openModal.addEventListener("click", function () {
+    console.log("hello ");
     modal.style.display = "flex";
 });
 closeModal.addEventListener("click", function () {
@@ -47,7 +49,6 @@ class TaskForm {
             const allTask = (yield response.json());
             let html = "";
             allTask.forEach((alltask) => {
-                console.log(alltask);
                 html += `
       <div class="project-card">
       <div class="card-text">
@@ -64,8 +65,11 @@ ${alltask.taskDescription}        </p>
             src="../Assets/images/logo.png"
             alt=""
           />
-          <img src="../Assets/icons/ellipsis.svg" alt="" />
-        </div>
+          <div class="update-icons">
+          <img src="../Assets/icons/trash.svg" alt="" />
+          <img class="addProject"  width="20" height="20" src="../Assets/icons/edit-task.png" alt="" />
+            </div>
+          </div>
       </div>
     </div>
        `;
