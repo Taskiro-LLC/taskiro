@@ -1,12 +1,16 @@
 const modal = document.querySelector(".modal") as HTMLElement;
 const closeModal = document.querySelector("#closeModal") as HTMLElement;
 const openModal = document.querySelector(".addProject") as HTMLElement;
-const updateModal = document.querySelector("#updatebtn");
+const updateModal = document.querySelector("#updatebtn") as HTMLElement;
+const btn = document.querySelector("#addbtn") as HTMLElement;
+const updatePr = document.querySelector("#projectUpdate") as HTMLButtonElement;
 
 openModal.addEventListener("click", function () {
-  console.log("hello ");
   modal.style.display = "flex";
+  updateModal.style.display = "none";
+  btn.style.display = "block";
 });
+
 closeModal.addEventListener("click", function () {
   modal.style.display = "none";
 });
@@ -16,7 +20,19 @@ window.addEventListener("click", function (e) {
   }
 });
 
+function modalUpdate() {
+  btn.style.display = "none";
+  updateModal.style.display = "block";
+  modal.style.display = "flex";
+  window.addEventListener("click", function (e) {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+}
+
 interface task {
+  [x: string]: any;
   taskName: string;
   taskDescription: string;
   taskDate: Date;
@@ -28,6 +44,7 @@ class TaskForm {
   taskDescriptionInput: HTMLInputElement;
   taskDateInput: HTMLInputElement;
   assignToSelect: HTMLSelectElement;
+  // static prepopulate: any;
 
   constructor() {
     this.taskNameInput = document.querySelector(
@@ -77,7 +94,7 @@ ${alltask.taskDescription}        </p>
           />
           <div class="update-icons">
           <img src="../Assets/icons/trash.svg" alt="" />
-          <img class="addProject"  width="20" height="20" src="../Assets/icons/edit-task.png" alt="" />
+          <img id="projectUpdate" onClick="TaskForm.prepopulate(${alltask.id})" width="20" height="20" src="../Assets/icons/edit-task.png" alt="" />
             </div>
           </div>
       </div>
@@ -87,6 +104,49 @@ ${alltask.taskDescription}        </p>
     const app = document.querySelector(".previous-project")! as HTMLDivElement;
     app.innerHTML = html;
   }
+
+  // async updateTask(id: number) {
+  //   const response = await fetch(`http://localhost:3000/tasks/${id}`);
+  //   const tasc = (await response.json()) as task;
+  //   TaskForm.prepopulate(tasc);
+  // }
+
+  async updateTask(id: number) {
+    const response = await fetch(`http://localhost:3000/tasks/${id}`);
+    const tasc = await response.json();
+    console.log(tasc);
+  }
+
+  static async prepopulate(id: number) {
+    modalUpdate();
+    const response = await fetch(`http://localhost:3000/tasks/${id}`);
+    const tasc = await response.json();
+    console.log(tasc);
+
+    (document.querySelector("#taskName") as HTMLInputElement).value =
+      tasc.taskName.toString();
+
+    (document.querySelector("#description") as HTMLInputElement).value =
+      tasc.taskDescription.toString();
+    (document.querySelector("#date") as HTMLInputElement).value =
+      tasc.taskDate.toString();
+    (document.querySelector("#users") as HTMLSelectElement).value =
+      tasc.assignTo.toString();
+    // (document.querySelector("#image") as HTMLInputElement).value = photo.url;
+    // (document.getElementById("addBtn")! as HTMLButtonElement).innerText =
+    //   "Update Photo";
+  }
+
+  // updateModal.addEventListener("click", async function(){
+  //     await fetch(`http://localhost:3000/tasks/${id}`,{
+  //       method: "PATCH",
+  //       body: JSON.stringify(),
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //     })
+
+  // })
 }
 
 const createTask = async () => {
@@ -101,10 +161,8 @@ const createTask = async () => {
     },
   });
 };
-const btn = document.querySelector("#addbtn")!;
 btn.addEventListener("click", createTask);
 
-// console.log(user); // { name: 'John Doe', email: 'john.doe@example.com', password: 'password123', type: 'admin' }
 const myTask = new TaskForm();
 myTask.getUser();
 myTask.showTask();
