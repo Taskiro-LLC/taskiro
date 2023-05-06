@@ -35,129 +35,28 @@
   ],
   "tasks": [
     {
-      "id": 1,
-      "taskName": "Login",
-      "taskDescription": "Texte explicatif qui dit en quoi consiste ce projet qui dure depuis plus de 2 ans",
-      "taskDate": "3/3/2023"
+      "name": "sssss",
+      "email": "ssssssss",
+      "password": "aaaaaaaaa",
+      "type": "admin",
+      "engaged": false,
+      "id": 1
     },
     {
-      "taskName": "Navbar",
-      "taskDescription": "3ertfghh",
-      "taskDate": "2023-05-09T00:00:00.000Z",
-      "assignTo": "1",
+      "name": "aaaaaaaaaaaaaa",
+      "email": "aaaaaaaaaaaaaaaaaa",
+      "password": "123123",
+      "type": "user",
+      "engaged": false,
+      "id": 2
+    },
+    {
+      "name": "aweSAM-XS",
+      "email": "samsamsamsam",
+      "password": "123123",
+      "type": "admin",
+      "engaged": false,
       "id": 3
-    },
-    {
-      "taskName": "home page",
-      "taskDescription": "translatudfghjkvbnmfghjcvbn",
-      "taskDate": null,
-      "assignTo": "1",
-      "id": 4
-    },
-    {
-      "taskName": "footer",
-      "taskDescription": "Texte explicatif qui dit en quoi consiste ce projet qui dure depuis plus de 2 ans",
-      "taskDate": "2023-05-24T00:00:00.000Z",
-      "assignTo": "1",
-      "id": 6
-    },
-    {
-      "taskName": "home page",
-      "taskDescription": "translatudfghjkvbnmfghjcvbn",
-      "taskDate": null,
-      "assignTo": "1",
-      "id": 4
-    },
-    {
-      "taskName": "home page",
-      "taskDescription": "translatudfghjkvbnmfghjcvbn",
-      "taskDate": null,
-      "assignTo": "1",
-      "id": 4
-    },
-    {
-      "taskName": "fghj",
-      "taskDescription": "gsyahcsk scsusc usgwcusc ",
-      "taskDate": "2023-05-21T00:00:00.000Z",
-      "assignTo": "1",
-      "id": 8
-    },
-    {
-      "taskName": "fghj",
-      "taskDescription": "gsyahcsk scsusc usgwcusc ",
-      "taskDate": "2023-05-21T00:00:00.000Z",
-      "assignTo": "1",
-      "id": 8
-    },
-    {
-      "taskName": "fghj",
-      "taskDescription": "gsyahcsk scsusc usgwcusc ",
-      "taskDate": "2023-05-21T00:00:00.000Z",
-      "assignTo": "1",
-      "id": 8
-    },
-    {
-      "taskName": "fghj",
-      "taskDescription": "gsyahcsk scsusc usgwcusc ",
-      "taskDate": "2023-05-21T00:00:00.000Z",
-      "assignTo": "1",
-      "id": 8
-    },
-    {
-      "taskName": "fghj",
-      "taskDescription": "gsyahcsk scsusc usgwcusc ",
-      "taskDate": "2023-05-21T00:00:00.000Z",
-      "assignTo": "1",
-      "id": 8
-    },
-    {
-      "taskName": "fghj",
-      "taskDescription": "gsyahcsk scsusc usgwcusc ",
-      "taskDate": "2023-05-21T00:00:00.000Z",
-      "assignTo": "1",
-      "id": 8
-    },
-    {
-      "taskName": "fghj",
-      "taskDescription": "gsyahcsk scsusc usgwcusc ",
-      "taskDate": "2023-05-21T00:00:00.000Z",
-      "assignTo": "1",
-      "id": 8
-    },
-    {
-      "taskName": "refg",
-      "taskDescription": "fghgjh",
-      "taskDate": "2023-05-22T00:00:00.000Z",
-      "assignTo": "1",
-      "id": 9
-    },
-    {
-      "taskName": "egrethtrj",
-      "taskDescription": "qewetjt wrjtjfg",
-      "taskDate": "2023-05-04T00:00:00.000Z",
-      "assignTo": "1",
-      "id": 10
-    },
-    {
-      "taskName": "werghjk",
-      "taskDescription": "sdfghjkl",
-      "taskDate": "2023-05-23T00:00:00.000Z",
-      "assignTo": "4",
-      "id": 11
-    },
-    {
-      "taskName": "Navbar",
-      "taskDescription": "ul;",
-      "taskDate": "2023-06-02T00:00:00.000Z",
-      "assignTo": "4",
-      "id": 12
-    },
-    {
-      "taskName": "fghj",
-      "taskDescription": "ertyuj",
-      "taskDate": "2023-05-20T00:00:00.000Z",
-      "assignTo": "4",
-      "id": 13
     }
   ]
 }
