@@ -27,10 +27,16 @@ const modal = document.querySelector(".modal");
 const closeModal = document.querySelector("#closeModal");
 const openModal = document.querySelector(".addProject");
 const updateModal = document.querySelector("#updatebtn");
+const btn = document.querySelector("#addbtn");
+const updatePr = document.querySelector("#projectUpdate");
 openModal.addEventListener("click", function () {
-    console.log("hello ");
     modal.style.display = "flex";
+<<<<<<< HEAD
 >>>>>>> f0183ac (add admin dashboard functionality)
+=======
+    updateModal.style.display = "none";
+    btn.style.display = "block";
+>>>>>>> 934ae2e (add admin dashboard functionality)
 });
 closeModal.addEventListener("click", function () {
     modal.style.display = "none";
@@ -41,6 +47,9 @@ window.addEventListener("click", function (e) {
     }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 934ae2e (add admin dashboard functionality)
 function modalUpdate() {
     btn.style.display = "none";
     updateModal.style.display = "block";
@@ -52,12 +61,16 @@ function modalUpdate() {
     });
 }
 class TaskForm {
+<<<<<<< HEAD
     static deleteBtnTask() {
         throw new Error("Method not implemented.");
     }
 =======
 class TaskForm {
 >>>>>>> f0183ac (add admin dashboard functionality)
+=======
+    // static prepopulate: any;
+>>>>>>> 934ae2e (add admin dashboard functionality)
     constructor() {
         this.taskNameInput = document.querySelector("#taskName");
         this.taskDescriptionInput = document.querySelector("#description");
@@ -111,9 +124,14 @@ ${alltask.taskDescription}        </p>
           />
 <<<<<<< HEAD
           <div class="update-icons">
+<<<<<<< HEAD
           <img id="deleteBtn" onClick="TaskForm.deleteTask(${alltask.id})"  src="../Assets/icons/trash.svg" alt="" />
           <img id="projectUpdate" onClick="TaskForm.prepopulate(${alltask.id})
           " width="20" height="20" src="../Assets/icons/edit-task.png" alt="" />
+=======
+          <img src="../Assets/icons/trash.svg" alt="" />
+          <img id="projectUpdate" onClick="TaskForm.prepopulate(${alltask.id})" width="20" height="20" src="../Assets/icons/edit-task.png" alt="" />
+>>>>>>> 934ae2e (add admin dashboard functionality)
             </div>
           </div>
 =======
@@ -128,6 +146,7 @@ ${alltask.taskDescription}        </p>
             app.innerHTML = html;
         });
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     static deleteTask(id) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -159,6 +178,18 @@ ${alltask.taskDescription}        </p>
                     "Content-Type": "application/json",
                 },
             });
+=======
+    // async updateTask(id: number) {
+    //   const response = await fetch(`http://localhost:3000/tasks/${id}`);
+    //   const tasc = (await response.json()) as task;
+    //   TaskForm.prepopulate(tasc);
+    // }
+    updateTask(id) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield fetch(`http://localhost:3000/tasks/${id}`);
+            const tasc = yield response.json();
+            console.log(tasc);
+>>>>>>> 934ae2e (add admin dashboard functionality)
         });
     }
     static prepopulate(id) {
@@ -175,6 +206,7 @@ ${alltask.taskDescription}        </p>
                 tasc.taskDate.toString();
             document.querySelector("#users").value =
                 tasc.assignTo.toString();
+<<<<<<< HEAD
             TaskForm.id = id;
         });
     }
@@ -187,6 +219,13 @@ const createTask = () => __awaiter(void 0, void 0, void 0, function* () {
     const form = new TaskForm();
     const addedTask = form.getTask();
 =======
+=======
+            // (document.querySelector("#image") as HTMLInputElement).value = photo.url;
+            // (document.getElementById("addBtn")! as HTMLButtonElement).innerText =
+            //   "Update Photo";
+        });
+    }
+>>>>>>> 934ae2e (add admin dashboard functionality)
 }
 const createTask = () => __awaiter(void 0, void 0, void 0, function* () {
     const form = new TaskForm();
@@ -202,13 +241,15 @@ const createTask = () => __awaiter(void 0, void 0, void 0, function* () {
     });
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 btn.addEventListener("click", createTask);
 const myTask = new TaskForm();
 myTask.getTask();
 =======
 const btn = document.querySelector("#addbtn");
+=======
+>>>>>>> 934ae2e (add admin dashboard functionality)
 btn.addEventListener("click", createTask);
-// console.log(user); // { name: 'John Doe', email: 'john.doe@example.com', password: 'password123', type: 'admin' }
 const myTask = new TaskForm();
 myTask.getUser();
 >>>>>>> f0183ac (add admin dashboard functionality)
