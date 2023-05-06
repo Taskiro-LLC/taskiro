@@ -11,15 +11,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 const modal = document.querySelector(".modal");
 const closeModal = document.querySelector("#closeModal");
 const openModal = document.querySelector(".addProject");
-const updateModal = document.getElementById("updatebtn");
-const btn = document.querySelector("#addbtn");
-const updatePr = document.querySelector("#projectUpdate");
-// const deleteBtnTask = document.querySelector("#deleteBtn") as HTMLImageElement;
-console.log(updateModal);
+const updateModal = document.querySelector("#updatebtn");
 openModal.addEventListener("click", function () {
+    console.log("hello ");
     modal.style.display = "flex";
-    updateModal.style.display = "none";
-    btn.style.display = "block";
 });
 closeModal.addEventListener("click", function () {
     modal.style.display = "none";
@@ -29,30 +24,17 @@ window.addEventListener("click", function (e) {
         modal.style.display = "none";
     }
 });
-function modalUpdate() {
-    btn.style.display = "none";
-    updateModal.style.display = "block";
-    modal.style.display = "flex";
-    window.addEventListener("click", function (e) {
-        if (e.target === modal) {
-            modal.style.display = "none";
-        }
-    });
-}
 class TaskForm {
-    static deleteBtnTask() {
-        throw new Error("Method not implemented.");
-    }
     constructor() {
         this.taskNameInput = document.querySelector("#taskName");
         this.taskDescriptionInput = document.querySelector("#description");
         this.taskDateInput = document.querySelector("#date");
         this.assignToSelect = document.querySelector("#users");
     }
-    getTask() {
+    getUser() {
         const taskName = this.taskNameInput.value;
         const taskDescription = this.taskDescriptionInput.value;
-        const taskDate = this.taskDateInput.value;
+        const taskDate = new Date(this.taskDateInput.value);
         const assignTo = this.assignToSelect.value;
         return {
             taskName,
@@ -84,9 +66,8 @@ ${alltask.taskDescription}        </p>
             alt=""
           />
           <div class="update-icons">
-          <img id="deleteBtn" onClick="TaskForm.deleteTask(${alltask.id})"  src="../Assets/icons/trash.svg" alt="" />
-          <img id="projectUpdate" onClick="TaskForm.prepopulate(${alltask.id})
-          " width="20" height="20" src="../Assets/icons/edit-task.png" alt="" />
+          <img src="../Assets/icons/trash.svg" alt="" />
+          <img class="addProject"  width="20" height="20" src="../Assets/icons/edit-task.png" alt="" />
             </div>
           </div>
       </div>
@@ -97,63 +78,10 @@ ${alltask.taskDescription}        </p>
             app.innerHTML = html;
         });
     }
-    static deleteTask(id) {
-        return __awaiter(this, void 0, void 0, function* () {
-            yield fetch(`http://localhost:3000/tasks/${id}`, {
-                method: "DELETE",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-            });
-        });
-    }
-    static updateTask() {
-        return __awaiter(this, void 0, void 0, function* () {
-            const response = yield fetch(`http://localhost:3000/tasks/${TaskForm.id}`);
-            const taskupdate = yield response.json();
-            TaskForm.prepopulate(taskupdate);
-            console.log("update");
-            const updatedTask = new TaskForm().getTask();
-            this.sendUpdate(Object.assign({}, updatedTask));
-        });
-    }
-    static sendUpdate(tasking) {
-        return __awaiter(this, void 0, void 0, function* () {
-            console.log(tasking);
-            yield fetch(`http://localhost:3000/tasks/${TaskForm.id}`, {
-                method: "PUT",
-                body: JSON.stringify(tasking),
-                headers: {
-                    "Content-Type": "application/json",
-                },
-            });
-        });
-    }
-    static prepopulate(id) {
-        return __awaiter(this, void 0, void 0, function* () {
-            modalUpdate();
-            const response = yield fetch(`http://localhost:3000/tasks/${id}`);
-            const tasc = yield response.json();
-            console.log(tasc);
-            document.querySelector("#taskName").value =
-                tasc.taskName.toString();
-            document.querySelector("#description").value =
-                tasc.taskDescription.toString();
-            document.querySelector("#date").value =
-                tasc.taskDate.toString();
-            document.querySelector("#users").value =
-                tasc.assignTo.toString();
-            TaskForm.id = id;
-        });
-    }
 }
-TaskForm.id = 0;
-updateModal.addEventListener("click", () => {
-    TaskForm.updateTask();
-});
 const createTask = () => __awaiter(void 0, void 0, void 0, function* () {
     const form = new TaskForm();
-    const addedTask = form.getTask();
+    const addedTask = form.getUser();
     console.log(addedTask);
     yield fetch("http://localhost:3000/tasks", {
         method: "POST",
@@ -163,7 +91,9 @@ const createTask = () => __awaiter(void 0, void 0, void 0, function* () {
         },
     });
 });
+const btn = document.querySelector("#addbtn");
 btn.addEventListener("click", createTask);
+// console.log(user); // { name: 'John Doe', email: 'john.doe@example.com', password: 'password123', type: 'admin' }
 const myTask = new TaskForm();
-myTask.getTask();
+myTask.getUser();
 myTask.showTask();
