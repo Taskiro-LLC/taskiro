@@ -12,9 +12,12 @@ const modal = document.querySelector(".modal");
 const closeModal = document.querySelector("#closeModal");
 const openModal = document.querySelector(".addProject");
 const updateModal = document.querySelector("#updatebtn");
+const btn = document.querySelector("#addbtn");
+const updatePr = document.querySelector("#projectUpdate");
 openModal.addEventListener("click", function () {
-    console.log("hello ");
     modal.style.display = "flex";
+    updateModal.style.display = "none";
+    btn.style.display = "block";
 });
 closeModal.addEventListener("click", function () {
     modal.style.display = "none";
@@ -24,7 +27,18 @@ window.addEventListener("click", function (e) {
         modal.style.display = "none";
     }
 });
+function modalUpdate() {
+    btn.style.display = "none";
+    updateModal.style.display = "block";
+    modal.style.display = "flex";
+    window.addEventListener("click", function (e) {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+}
 class TaskForm {
+    // static prepopulate: any;
     constructor() {
         this.taskNameInput = document.querySelector("#taskName");
         this.taskDescriptionInput = document.querySelector("#description");
@@ -67,7 +81,7 @@ ${alltask.taskDescription}        </p>
           />
           <div class="update-icons">
           <img src="../Assets/icons/trash.svg" alt="" />
-          <img class="addProject"  width="20" height="20" src="../Assets/icons/edit-task.png" alt="" />
+          <img id="projectUpdate" onClick="TaskForm.prepopulate(${alltask.id})" width="20" height="20" src="../Assets/icons/edit-task.png" alt="" />
             </div>
           </div>
       </div>
@@ -76,6 +90,37 @@ ${alltask.taskDescription}        </p>
             });
             const app = document.querySelector(".previous-project");
             app.innerHTML = html;
+        });
+    }
+    // async updateTask(id: number) {
+    //   const response = await fetch(`http://localhost:3000/tasks/${id}`);
+    //   const tasc = (await response.json()) as task;
+    //   TaskForm.prepopulate(tasc);
+    // }
+    updateTask(id) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield fetch(`http://localhost:3000/tasks/${id}`);
+            const tasc = yield response.json();
+            console.log(tasc);
+        });
+    }
+    static prepopulate(id) {
+        return __awaiter(this, void 0, void 0, function* () {
+            modalUpdate();
+            const response = yield fetch(`http://localhost:3000/tasks/${id}`);
+            const tasc = yield response.json();
+            console.log(tasc);
+            document.querySelector("#taskName").value =
+                tasc.taskName.toString();
+            document.querySelector("#description").value =
+                tasc.taskDescription.toString();
+            document.querySelector("#date").value =
+                tasc.taskDate.toString();
+            document.querySelector("#users").value =
+                tasc.assignTo.toString();
+            // (document.querySelector("#image") as HTMLInputElement).value = photo.url;
+            // (document.getElementById("addBtn")! as HTMLButtonElement).innerText =
+            //   "Update Photo";
         });
     }
 }
@@ -91,9 +136,7 @@ const createTask = () => __awaiter(void 0, void 0, void 0, function* () {
         },
     });
 });
-const btn = document.querySelector("#addbtn");
 btn.addEventListener("click", createTask);
-// console.log(user); // { name: 'John Doe', email: 'john.doe@example.com', password: 'password123', type: 'admin' }
 const myTask = new TaskForm();
 myTask.getUser();
 myTask.showTask();
