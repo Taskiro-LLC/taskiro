@@ -79,7 +79,10 @@
       <div class="container">
         <div class="container-header">
           <h1>
-            Profile <span><img src="../Assets/icons/add.svg" alt="" /></span>
+            Profile
+            <span
+              ><img id="addProject" src="../Assets/icons/add.svg" alt=""
+            /></span>
           </h1>
           <h3 class="subtitle">All projects</h3>
         </div>
@@ -341,28 +344,32 @@
     </div>
     <div class="modal">
       <div class="modal_content">
+        <img id="closeModal" src="../Assets/icons/add.svg" alt="" />
         <h3>ADD NEW PROJECT</h3>
         <form action="">
           <label>Task Title</label>
-          <input type="text" placeholder="enter task name..." />
+          <input type="text" id="taskName" placeholder="enter task name..." />
           <label>Task Description</label>
           <textarea
             name=""
-            id=""
+            id="description"
             cols="30"
             placeholder="enter task description..."
             rows="10"
           ></textarea>
+          <input id="date" type="date" />
           <label>Assign to:</label>
-          <select name="" id="">
+          <select name="" id="users">
             <option value="1">User1</option>
-            <option value="1">User1</option>
-            <option value="1">User1</option>
-            <option value="1">User1</option>
+            <option value="1">User2</option>
+            <option value="1">User3</option>
+            <option value="1">User4</option>
           </select>
-          <button>Add projet</button>
+          <button id="addbtn">Add project</button>
         </form>
       </div>
     </div>
+
+    <script src="../dist/admin-dashboard.js"></script>
   </body>
 </html>
