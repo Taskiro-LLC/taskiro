@@ -155,3 +155,6 @@ const createUser = async () => {
 
 const signupBtn = document.querySelector('button')!;
 signupBtn.addEventListener('click', createUser);
+
+const btn = document.querySelector('button')!;
+btn.addEventListener('click', createUser);
