@@ -6,6 +6,7 @@ const btn = document.querySelector("#addbtn") as HTMLElement;
 const updatePr = document.querySelector("#projectUpdate") as HTMLButtonElement;
 
 openModal.addEventListener("click", function () {
+  console.log("hello ");
   modal.style.display = "flex";
   updateModal.style.display = "none";
   btn.style.display = "block";

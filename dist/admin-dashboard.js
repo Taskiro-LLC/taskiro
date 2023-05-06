@@ -25,7 +25,10 @@ openModal.addEventListener("click", function () {
 const openModal = document.querySelector("#addProject");
 const modal = document.querySelector(".modal");
 const closeModal = document.querySelector("#closeModal");
+const openModal = document.querySelector(".addProject");
+const updateModal = document.querySelector("#updatebtn");
 openModal.addEventListener("click", function () {
+    console.log("hello ");
     modal.style.display = "flex";
 >>>>>>> f0183ac (add admin dashboard functionality)
 });
