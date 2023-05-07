@@ -31,6 +31,14 @@
       "type": "user",
       "engaged": false,
       "id": 4
+    },
+    {
+      "name": "E-Wangui",
+      "email": "quickspaceke@gmail.com",
+      "password": "123123",
+      "type": "user",
+      "engaged": false,
+      "id": 5
     }
   ],
   "tasks": [
@@ -59,7 +67,7 @@
       "taskName": "footer",
       "taskDescription": "Texte explicatif qui dit en quoi consiste ce projet qui dure depuis plus de 2 ans",
       "taskDate": "2023-05-24",
-      "assignTo": "1",
+      "assignTo": "5",
       "id": 6
     },
     {
