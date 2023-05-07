@@ -1,9 +1,11 @@
 const modal = document.querySelector(".modal") as HTMLElement;
 const closeModal = document.querySelector("#closeModal") as HTMLElement;
 const openModal = document.querySelector(".addProject") as HTMLElement;
-const updateModal = document.querySelector("#updatebtn") as HTMLElement;
+const updateModal = document.getElementById("updatebtn") as HTMLElement;
 const btn = document.querySelector("#addbtn") as HTMLElement;
 const updatePr = document.querySelector("#projectUpdate") as HTMLButtonElement;
+// const deleteBtnTask = document.querySelector("#deleteBtn") as HTMLImageElement;
+console.log(updateModal);
 
 openModal.addEventListener("click", function () {
   modal.style.display = "flex";
@@ -40,11 +42,14 @@ interface task {
 }
 
 class TaskForm {
+  static deleteBtnTask(): any {
+    throw new Error("Method not implemented.");
+  }
   taskNameInput: HTMLInputElement;
   taskDescriptionInput: HTMLInputElement;
   taskDateInput: HTMLInputElement;
   assignToSelect: HTMLSelectElement;
-  // static prepopulate: any;
+  static id: number = 0;
 
   constructor() {
     this.taskNameInput = document.querySelector(
@@ -57,7 +62,7 @@ class TaskForm {
     this.assignToSelect = document.querySelector("#users") as HTMLSelectElement;
   }
 
-  getUser(): task {
+  getTask(): task {
     const taskName = this.taskNameInput.value;
     const taskDescription = this.taskDescriptionInput.value;
     const taskDate = this.taskDateInput.value;
@@ -93,8 +98,9 @@ ${alltask.taskDescription}        </p>
             alt=""
           />
           <div class="update-icons">
-          <img src="../Assets/icons/trash.svg" alt="" />
-          <img id="projectUpdate" onClick="TaskForm.prepopulate(${alltask.id})" width="20" height="20" src="../Assets/icons/edit-task.png" alt="" />
+          <img id="deleteBtn" onClick="TaskForm.deleteTask(${alltask.id})"  src="../Assets/icons/trash.svg" alt="" />
+          <img id="projectUpdate" onClick="TaskForm.prepopulate(${alltask.id})
+          " width="20" height="20" src="../Assets/icons/edit-task.png" alt="" />
             </div>
           </div>
       </div>
@@ -104,22 +110,34 @@ ${alltask.taskDescription}        </p>
     const app = document.querySelector(".previous-project")! as HTMLDivElement;
     app.innerHTML = html;
   }
-
-  async updateTask(id: number) {
-    // const response = await fetch(`http://localhost:3000/tasks/${id}`);
-    // const tasc = await response.json();
-    // updateModal.addEventListener("click", async function () {
-    const form = new TaskForm();
-    const addedTask = form.getUser();
-    await fetch(`http://localhost:3000/photos/${id}`, {
-      method: "PATCH",
-      body: JSON.stringify(addedTask),
+  static async deleteTask(id: number) {
+    await fetch(`http://localhost:3000/tasks/${id}`, {
+      method: "DELETE",
       headers: {
         "Content-Type": "application/json",
       },
     });
-    // }
-    // );
+  }
+
+  static async updateTask() {
+    const response = await fetch(`http://localhost:3000/tasks/${TaskForm.id}`);
+    const taskupdate = await response.json();
+
+    TaskForm.prepopulate(taskupdate);
+    console.log("update");
+    const updatedTask = new TaskForm().getTask();
+    this.sendUpdate({ ...updatedTask });
+  }
+
+  static async sendUpdate(tasking: task) {
+    console.log(tasking);
+    await fetch(`http://localhost:3000/tasks/${TaskForm.id}`, {
+      method: "PUT",
+      body: JSON.stringify(tasking),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
   }
 
   static async prepopulate(id: number) {
@@ -137,12 +155,16 @@ ${alltask.taskDescription}        </p>
       tasc.taskDate.toString();
     (document.querySelector("#users") as HTMLSelectElement).value =
       tasc.assignTo.toString();
+    TaskForm.id = id;
   }
 }
+updateModal.addEventListener("click", () => {
+  TaskForm.updateTask();
+});
 
 const createTask = async () => {
   const form = new TaskForm();
-  const addedTask = form.getUser();
+  const addedTask = form.getTask();
   console.log(addedTask);
   await fetch("http://localhost:3000/tasks", {
     method: "POST",
@@ -152,8 +174,9 @@ const createTask = async () => {
     },
   });
 };
+
 btn.addEventListener("click", createTask);
 
 const myTask = new TaskForm();
-myTask.getUser();
+myTask.getTask();
 myTask.showTask();
