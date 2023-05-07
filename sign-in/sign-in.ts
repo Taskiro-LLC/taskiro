@@ -3,6 +3,30 @@ interface UserLogin {
     password: string;
 }
 
+window.onload = () => {
+    // Check if there is a logged-in user and redirect them automatically
+    const loggedInUser = JSON.parse(
+        localStorage.getItem('loggedInUser') || '{}'
+    );
+    if (loggedInUser && loggedInUser.email) {
+        if (loggedInUser.type === 'admin') {
+            window.location.href = '../admin-dashboard/admin-dashboard.html';
+            history.replaceState(
+                null,
+                '',
+                '../admin-dashboard/admin-dashboard.html'
+            );
+        } else {
+            window.location.href = '../user-dashboard/user-dashboard.html';
+            history.replaceState(
+                null,
+                '',
+                '../user-dashboard/user-dashboard.html'
+            );
+        }
+        return;
+    }
+}
 class LoginForm {
     emailInput: HTMLInputElement;
     passwordInput: HTMLInputElement;
@@ -55,6 +79,8 @@ class LoginForm {
     }
 }
 
+
+
 const loginUser = async () => {
     const form = new LoginForm();
     form.clearValidation();
@@ -65,15 +91,15 @@ const loginUser = async () => {
             await fetch('http://localhost:3000/users')
         ).json()) as UserSignUp[];
 
-        const matchedUser: UserSignUp | undefined= users.find(
+        const matchedUser: UserSignUp | undefined = users.find(
             (u) => u.email === user.email && u.password === user.password
         );
 
         if (matchedUser) {
+            localStorage.setItem('loggedInUser', JSON.stringify(matchedUser));
             if (matchedUser.type === 'admin') {
-                console.log(matchedUser);
-                console.log('Logged in as:', matchedUser.email);
-                window.location.href = '../admin-dashboard/admin-dashboard.html';
+                window.location.href =
+                    '../admin-dashboard/admin-dashboard.html';
                 history.replaceState(
                     null,
                     '',
