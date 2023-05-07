@@ -130,7 +130,6 @@ const createUser = async () => {
     const user = form.getUser();
     if (user) {
         const userExists = await form.checkIfUserExists(user.email);
-
         if (userExists) {
             const emailInput = document.querySelector(
                 '#email'
