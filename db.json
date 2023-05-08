@@ -25,7 +25,7 @@
       "id": 3
     },
     {
-      "name": "Esther Wangui",
+      "name": "esther Wangui",
       "email": "sample@gmail.go.ke",
       "password": "sample@gmail.com",
       "type": "user",
@@ -39,6 +39,22 @@
       "type": "user",
       "engaged": false,
       "id": 5
+    },
+    {
+      "name": "Alexmaingi",
+      "email": "maingialex@gmail.com",
+      "password": "maingi245",
+      "type": "user",
+      "engaged": false,
+      "id": 6
+    },
+    {
+      "name": "Alexmaingi",
+      "email": "Alexmaingi@gmail.com",
+      "password": "alexmaingi",
+      "type": "user",
+      "engaged": false,
+      "id": 7
     }
   ],
   "tasks": [
@@ -47,7 +63,7 @@
       "taskName": "Login",
       "taskDescription": "Texte explicatif qui dit en quoi consiste ce projet qui dure depuis plus de 2 ans",
       "taskDate": "2023-06-04",
-      "assignTo": 2,
+      "assignTo": "Samuel Kiprop",
       "progress": "complete",
       "completedOn": "07/05/2023"
     },
@@ -55,7 +71,7 @@
       "taskName": "Navbar",
       "taskDescription": "3ertfghh",
       "taskDate": "2023-05-09",
-      "assignTo": 2,
+      "assignTo": "Samuel Kiprop",
       "progress": "complete",
       "completedOn": "07/05/2023",
       "id": 3
@@ -64,7 +80,7 @@
       "taskName": "home page",
       "taskDescription": "translatudfghjkvbnmfghjcvbn",
       "taskDate": "2023-05-09",
-      "assignTo": 2,
+      "assignTo": "Samuel Kiprop",
       "progress": "complete",
       "completedOn": "08/05/2023",
       "id": 4
@@ -73,7 +89,7 @@
       "taskName": "footer",
       "taskDescription": "Texte explicatif qui dit en quoi consiste ce projet qui dure depuis plus de 2 ans",
       "taskDate": "2023-05-24",
-      "assignTo": 2,
+      "assignTo": "Samuel Kiprop",
       "progress": "complete",
       "completedOn": "07/05/2023",
       "id": 6
@@ -82,7 +98,7 @@
       "taskName": "fghj",
       "taskDescription": "gsyahcsk scsusc usgwcusc ",
       "taskDate": "2023-05-21",
-      "assignTo": 2,
+      "assignTo": "aweSAM-XS",
       "progress": "complete",
       "completedOn": "08/05/2023",
       "id": 8
@@ -91,7 +107,7 @@
       "taskName": "fghj",
       "taskDescription": "gsyahcsk scsusc usgwcusc ",
       "taskDate": "2023-05-21",
-      "assignTo": 2,
+      "assignTo": "Samuel Kiprop",
       "progress": "complete",
       "completedOn": "08/05/2023",
       "id": 9
@@ -100,16 +116,16 @@
       "taskName": "fghj",
       "taskDescription": "gsyahcsk scsusc usgwcusc ",
       "taskDate": "2023-05-21",
-      "assignTo": 2,
-      "progress": "complete",
-      "completedOn": "08/05/2023",
+      "assignTo": "aweSAM-XS",
+      "progress": "incomplete",
+      "completedOn": null,
       "id": 10
     },
     {
       "taskName": "fghj",
       "taskDescription": "gsyahcsk scsusc usgwcusc ",
       "taskDate": "2023-05-21",
-      "assignTo": 1,
+      "assignTo": "aweSAM-XS",
       "progress": "incomplete",
       "completedOn": null,
       "id": 11
@@ -118,7 +134,7 @@
       "taskName": "fghj",
       "taskDescription": "gsyahcsk scsusc usgwcusc ",
       "taskDate": "2023-05-21",
-      "assignTo": 1,
+      "assignTo": "aweSAM-XS",
       "progress": "incomplete",
       "completedOn": null,
       "id": 12
@@ -127,7 +143,7 @@
       "taskName": "fghj",
       "taskDescription": "gsyahcsk scsusc usgwcusc ",
       "taskDate": "2023-05-21",
-      "assignTo": 1,
+      "assignTo": "aweSAM-XS",
       "progress": "incomplete",
       "completedOn": null,
       "id": 13
@@ -136,7 +152,7 @@
       "taskName": "fghj",
       "taskDescription": "gsyahcsk scsusc usgwcusc ",
       "taskDate": "2023-05-21",
-      "assignTo": 1,
+      "assignTo": "aweSAM-XS",
       "progress": "incomplete",
       "completedOn": null,
       "id": 14
@@ -145,7 +161,7 @@
       "taskName": "refg",
       "taskDescription": "fghgjh",
       "taskDate": "2023-05-22",
-      "assignTo": 1,
+      "assignTo": "aweSAM-XS",
       "progress": "incomplete",
       "completedOn": null,
       "id": 15
@@ -154,7 +170,7 @@
       "taskName": "egrethtrj",
       "taskDescription": "qewetjt wrjtjfg",
       "taskDate": "2023-05-04",
-      "assignTo": 1,
+      "assignTo": "aweSAM-XS",
       "progress": "incomplete",
       "completedOn": null,
       "id": 16
@@ -163,7 +179,7 @@
       "taskName": "werghjk",
       "taskDescription": "sdfghjkl",
       "taskDate": "2023-05-23",
-      "assignTo": 4,
+      "assignTo": "esther Wangui",
       "progress": "incomplete",
       "completedOn": null,
       "id": 17
@@ -172,7 +188,7 @@
       "taskName": "Navbar",
       "taskDescription": "ul;",
       "taskDate": "2023-06-02",
-      "assignTo": 4,
+      "assignTo": "esther Wangui",
       "progress": "incomplete",
       "completedOn": null,
       "id": 18
@@ -181,7 +197,7 @@
       "taskName": "",
       "taskDescription": "",
       "taskDate": null,
-      "assignTo": 1,
+      "assignTo": "aweSAM-XS",
       "id": 19
     }
   ]
