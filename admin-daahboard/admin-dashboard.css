@@ -345,12 +345,6 @@ body {
   margin-top: 1.2rem;
 }
 .modal {
-  /* width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.3); */
   position: fixed;
   top: 0;
   align-items: center;
@@ -369,7 +363,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 30%;
-  height: 70%;
+  height: 68%;
   padding: 10px 20px;
   border-radius: 5px;
   border-radius: 15px;
@@ -464,4 +458,607 @@ form button {
 }
 .update-icons img {
   cursor: pointer;
+}
+
+@media screen and (max-width: 1672px) {
+  .side-bar .profile2 img {
+    border: 1px solid black;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 5.3rem;
+  }
+  .person .section1 h3 {
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+  .modal_content {
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 22rem;
+    height: 70%;
+    padding: 7px 10px;
+    border-radius: 5px;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    animation-name: animatemodal;
+    animation-duration: 0.4s;
+  }
+  .modal_content h3 {
+    margin-bottom: 2rem;
+    color: var(--progress-bar);
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  form input {
+    width: 30rem;
+    height: 3.5rem;
+    margin-bottom: 2rem;
+    background-color: var(--progress-inner-bar);
+    outline-style: none;
+    border-radius: 7px;
+    border: none;
+    padding-left: 9px;
+    font-size: 1rem;
+  }
+  form textarea {
+    margin-bottom: 2rem;
+    background-color: var(--progress-inner-bar);
+    outline-style: none;
+    border-radius: 7px;
+    border: none;
+    padding: 9px;
+    font-size: 1rem;
+    width: 30rem;
+  }
+  form select {
+    width: 30rem;
+    height: 3.5rem;
+    margin-bottom: 2rem;
+    background-color: var(--progress-inner-bar);
+    outline-style: none;
+    border-radius: 7px;
+    border: none;
+    padding-right: 9px;
+    font-size: 1rem;
+  }
+  form button {
+    width: 30rem;
+    height: 3.5rem;
+    margin-bottom: 2rem;
+    background-color: var(--progress-bar);
+    outline-style: none;
+    border-radius: 7px;
+    border: none;
+    padding-left: 9px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 1672px) {
+  .side-bar .profile2 img {
+    border: 1px solid black;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 5rem;
+  }
+  .person .section1 h3 {
+    margin-left: 1rem;
+    margin-top: 0.8rem;
+  }
+}
+@media screen and (max-width: 1406px) {
+  .side-bar .profile2 img {
+    border: 1px solid black;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 4rem;
+  }
+  .modal_content {
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 22rem;
+    height: 70%;
+    padding: 4px 7px;
+    border-radius: 5px;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    animation-name: animatemodal;
+    animation-duration: 0.4s;
+  }
+}
+@media screen and (max-width: 1314px) {
+  .side-bar .profile2 img {
+    border: 1px solid black;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 3.5rem;
+  }
+  .container-header h1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .container-header h1 span img {
+    min-width: 3.5rem;
+    cursor: pointer;
+  }
+
+  .previous-project {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  .modal_content {
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 22rem;
+    height: 73%;
+    padding: 7px 10px;
+    border-radius: 5px;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    animation-name: animatemodal;
+    animation-duration: 0.4s;
+  }
+
+  form label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  form input {
+    width: 25rem;
+    height: 3.5rem;
+    margin-bottom: 2rem;
+    background-color: var(--progress-inner-bar);
+    outline-style: none;
+    border-radius: 7px;
+    border: none;
+    padding-left: 9px;
+    font-size: 1rem;
+  }
+  form textarea {
+    margin-bottom: 2rem;
+    background-color: var(--progress-inner-bar);
+    outline-style: none;
+    border-radius: 7px;
+    border: none;
+    padding: 9px;
+    font-size: 1rem;
+    width: 25rem;
+  }
+  form select {
+    width: 25rem;
+    height: 3.5rem;
+    margin-bottom: 2rem;
+    background-color: var(--progress-inner-bar);
+    outline-style: none;
+    border-radius: 7px;
+    border: none;
+    padding-right: 9px;
+    font-size: 1rem;
+  }
+  form button {
+    width: 25rem;
+    height: 3.5rem;
+    margin-bottom: 2rem;
+    background-color: var(--progress-bar);
+    outline-style: none;
+    border-radius: 7px;
+    border: none;
+    padding-left: 9px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .side-bar {
+    width: 15%;
+    min-height: 95vh;
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 20px;
+    flex-direction: column;
+    background-color: #fff;
+  }
+  .project-card {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.75rem;
+    min-width: 20rem;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .container {
+    width: 70%;
+    min-height: 95vh;
+  }
+  .modal_content {
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 22rem;
+    height: 72%;
+    padding: 7px 10px;
+    border-radius: 5px;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    animation-name: animatemodal;
+    animation-duration: 0.4s;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  form input {
+    width: 25rem;
+    height: 3.2rem;
+    margin-bottom: 2rem;
+    background-color: var(--progress-inner-bar);
+    outline-style: none;
+    border-radius: 7px;
+    border: none;
+    padding-left: 9px;
+    font-size: 1rem;
+  }
+  form textarea {
+    margin-bottom: 2rem;
+    background-color: var(--progress-inner-bar);
+    outline-style: none;
+    border-radius: 7px;
+    border: none;
+    padding: 9px;
+    font-size: 1rem;
+    width: 25rem;
+  }
+  form select {
+    width: 25rem;
+    height: 3.5rem;
+    margin-bottom: 2rem;
+    background-color: var(--progress-inner-bar);
+    outline-style: none;
+    border-radius: 7px;
+    border: none;
+    padding-right: 9px;
+    font-size: 1rem;
+  }
+  form button {
+    width: 25rem;
+    height: 3.5rem;
+    margin-bottom: 2rem;
+    background-color: var(--progress-bar);
+    outline-style: none;
+    border-radius: 7px;
+    border: none;
+    padding-left: 9px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .side-bar {
+    width: 15%;
+    min-height: 95vh;
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 20px;
+    flex-direction: column;
+    background-color: #fff;
+  }
+  .project-card {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.75rem;
+    min-width: 20rem;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .container {
+    width: 70%;
+    min-height: 95vh;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  form input {
+    width: 25rem;
+    height: 5rem;
+    margin-bottom: 2.5rem;
+    background-color: var(--progress-inner-bar);
+    outline-style: none;
+    border-radius: 7px;
+    border: none;
+    padding-left: 9px;
+    font-size: 1rem;
+  }
+  form textarea {
+    margin-bottom: 2rem;
+    background-color: var(--progress-inner-bar);
+    outline-style: none;
+    border-radius: 7px;
+    border: none;
+    padding: 9px;
+    font-size: 1rem;
+    width: 25rem;
+  }
+  form select {
+    width: 25rem;
+    height: 3.5rem;
+    margin-bottom: 2rem;
+    background-color: var(--progress-inner-bar);
+    outline-style: none;
+    border-radius: 7px;
+    border: none;
+    padding-right: 9px;
+    font-size: 1rem;
+  }
+  form button {
+    width: 25rem;
+    height: 3.5rem;
+    margin-bottom: 2rem;
+    background-color: var(--progress-bar);
+    outline-style: none;
+    border-radius: 7px;
+    border: none;
+    padding-left: 9px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .side-bar {
+    width: 15%;
+    min-height: 95vh;
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 20px;
+    flex-direction: column;
+    background-color: #fff;
+  }
+  .project-card {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.75rem;
+    min-width: 20rem;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .container {
+    width: 70%;
+    min-height: 95vh;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  form input {
+    width: 22rem;
+    height: 3rem;
+    margin-bottom: 2.5rem;
+    background-color: var(--progress-inner-bar);
+    outline-style: none;
+    border-radius: 7px;
+    border: none;
+    padding-left: 9px;
+    font-size: 1rem;
+  }
+  form textarea {
+    margin-bottom: 2rem;
+    background-color: var(--progress-inner-bar);
+    outline-style: none;
+    border-radius: 7px;
+    border: none;
+    padding: 9px;
+    font-size: 1rem;
+    width: 22rem;
+  }
+  form select {
+    width: 22rem;
+    height: 3.5rem;
+    margin-bottom: 2rem;
+    background-color: var(--progress-inner-bar);
+    outline-style: none;
+    border-radius: 7px;
+    border: none;
+    padding-right: 9px;
+    font-size: 1rem;
+  }
+  form button {
+    width: 22rem;
+    height: 3.5rem;
+    margin-bottom: 2rem;
+    background-color: var(--progress-bar);
+    outline-style: none;
+    border-radius: 7px;
+    border: none;
+    padding-left: 9px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 1058px) {
+  .side-bar {
+    width: 15%;
+    min-height: 95vh;
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 20px;
+    flex-direction: column;
+    background-color: #fff;
+  }
+  .project-card {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.75rem;
+    min-width: 20rem;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .container {
+    width: 70%;
+    min-height: 95vh;
+  }
+  .modal_content h3 {
+    margin-bottom: 1rem;
+    color: var(--progress-bar);
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  form input {
+    width: 18rem;
+    height: 3rem;
+    margin-bottom: 2rem;
+    background-color: var(--progress-inner-bar);
+    outline-style: none;
+    border-radius: 7px;
+    border: none;
+    padding-left: 9px;
+    font-size: 1rem;
+  }
+  form textarea {
+    margin-bottom: 2rem;
+    background-color: var(--progress-inner-bar);
+    outline-style: none;
+    border-radius: 7px;
+    border: none;
+    padding: 9px;
+    font-size: 1rem;
+    width: 18rem;
+  }
+  form select {
+    width: 18rem;
+    height: 3.5rem;
+    margin-bottom: 2rem;
+    background-color: var(--progress-inner-bar);
+    outline-style: none;
+    border-radius: 7px;
+    border: none;
+    padding-right: 9px;
+    font-size: 1rem;
+  }
+  form button {
+    width: 18rem;
+    height: 3.5rem;
+    margin-bottom: 2rem;
+    background-color: var(--progress-bar);
+    outline-style: none;
+    border-radius: 7px;
+    border: none;
+    padding-left: 9px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+  }
 }
