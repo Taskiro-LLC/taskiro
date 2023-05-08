@@ -97,8 +97,8 @@ body {
   height: 75px;
   border-radius: 50%;
   position: absolute;
-  top: 5px;
-  left: 6.5rem;
+  inset: 0;
+  margin-inline: auto;
 }
 .side-bar .profile2 .profile-names {
   text-align: center;
