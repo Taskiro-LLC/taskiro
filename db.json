@@ -43,15 +43,6 @@
   ],
   "tasks": [
     {
-      "id": 1,
-      "taskName": "Login",
-      "taskDescription": "Texte explicatif qui dit en quoi consiste ce projet qui dure depuis plus de 2 ans",
-      "taskDate": "2023-06-04",
-      "assignTo": 2,
-      "progress": "complete",
-      "completedOn": "07/05/2023"
-    },
-    {
       "taskName": "Navbar",
       "taskDescription": "3ertfghh",
       "taskDate": "2023-05-09",
@@ -61,31 +52,11 @@
       "id": 3
     },
     {
-      "taskName": "home page",
+      "taskName": "home page toog",
       "taskDescription": "translatudfghjkvbnmfghjcvbn",
       "taskDate": "2023-05-09",
-      "assignTo": 2,
-      "progress": "complete",
-      "completedOn": "08/05/2023",
+      "assignTo": "2",
       "id": 4
-    },
-    {
-      "taskName": "footer",
-      "taskDescription": "Texte explicatif qui dit en quoi consiste ce projet qui dure depuis plus de 2 ans",
-      "taskDate": "2023-05-24",
-      "assignTo": 2,
-      "progress": "complete",
-      "completedOn": "07/05/2023",
-      "id": 6
-    },
-    {
-      "taskName": "fghj",
-      "taskDescription": "gsyahcsk scsusc usgwcusc ",
-      "taskDate": "2023-05-21",
-      "assignTo": 2,
-      "progress": "complete",
-      "completedOn": "08/05/2023",
-      "id": 8
     },
     {
       "taskName": "fghj",
