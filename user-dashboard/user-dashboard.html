@@ -1,149 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./user-dashboard.css" />
-    <script src="../dist/user-dashboard/user-dashboard.js" defer></script>
-    <title>Taskiro - User Dashboard</title>
-  </head>
-  <body>
-    <div class="main-container">
-      <div class="side-bar">
-        <img src="../Assets/images/logo2.png" alt="" />
-        <div class="profile">
-          <div class="profile1">
-            <img src="../Assets/images/banner.png" alt="" />
-          </div>
-          <img class="edit" src="../Assets/icons/edit.svg" alt="" />
-          <div class="profile2">
-          </div>
-        </div>
-        <div class="stats">
-          <h4>Stats</h4>
-          <h3>Rating: <span>132/314</span></h3>
-          <div class="progres"><div class="inner-progress"></div></div>
-          <div class="lists">
-            <div class="total">
-              <h4>Total :</h4>
-              <h2>314</h2>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./user-dashboard.css" />
+        <script src="../dist/user-dashboard/user-dashboard.js" defer></script>
+        <title>Taskiro - User Dashboard</title>
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="side-bar">
+                <img src="../Assets/images/logo2.png" alt="" />
+                <div class="profile">
+                    <div class="profile1">
+                        <img src="../Assets/images/banner.png" alt="" />
+                    </div>
+                    <img class="edit" src="../Assets/icons/edit.svg" alt="" />
+                    <div class="profile2"></div>
+                </div>
+                <div class="stats">
+                    <h4>Stats</h4>
+                    <h3>Rating: <span>132/314</span></h3>
+                    <div class="progres">
+                        <div class="inner-progress"></div>
+                    </div>
+                    <div class="lists">
+                        <div class="total">
+                            <h4>Total :</h4>
+                            <h2>314</h2>
+                        </div>
+                        <div class="total1">
+                            <h4>Completed :</h4>
+                            <h2>132</h2>
+                        </div>
+                        <div class="total2">
+                            <h4>Tasks :</h4>
+                            <h2>5</h2>
+                        </div>
+                        <div class="total3">
+                            <h4>Score :</h4>
+                            <h2>4</h2>
+                        </div>
+                    </div>
+                    <button class="logout">
+                        Log out
+                        <img
+                            height="60%"
+                            src="../Assets/icons/logout.png"
+                            alt="" />
+                    </button>
+                    <div class="date_time"></div>
+                </div>
             </div>
-            <div class="total1">
-              <h4>Completed :</h4>
-              <h2>132</h2>
-            </div>
-            <div class="total2">
-              <h4>Tasks :</h4>
-              <h2>1</h2>
-            </div>
-            <div class="total3">
-              <h4>Score :</h4>
-              <h2>4</h2>
-            </div>
-          </div>
-          <button class="logout">Log out <img height="60%" src="../Assets/icons/logout.png" alt="" /></button>
-          <div class="date_time">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="user-details"></div>
-        
-        <div class="current-project">
-          <h3 class="subtitle">Current Project</h3>
-          <div class="project-card">
+            <div class="container">
+                <div class="user-details"></div>
 
-          </div>
-          <h3 class="subtitle">Previous Projects</h3>
-          <div class="previous-project">
-            <div class="project-card">
-              <div class="card-text">
-                <h3>Taskiro</h3>
-                <p>
-                  Texte explicatif qui dit en quoi consiste ce projet qui dure
-                  depuis plus de 2 ans
-                </p>
-              </div>
-              <div class="card-illustration">
-                <p>Progress <span>25%</span></p>
-                <div class="progress"><div class="inner-progress"></div></div>
-                <div class="more">
-                  <img
-                    class="img-thumbnail"
-                    src="../Assets/images/logo.png"
-                    alt=""
-                  />
-                  <img src="../Assets/icons/ellipsis.svg" alt="" />
+                <div class="current-project">
+                    <h3 class="subtitle">Current Project</h3>
+                    <div class="project-card"></div>
+                    <h3 class="subtitle">Previous Projects</h3>
+                    <div class="previous-project"></div>
                 </div>
-              </div>
             </div>
-            <div class="project-card">
-              <div class="card-text">
-                <h3>Taskiro</h3>
-                <p>
-                  Texte explicatif qui dit en quoi consiste ce projet qui dure
-                  depuis plus de 2 ans
-                </p>
-              </div>
-              <div class="card-illustration">
-                <p>Progress <span>25%</span></p>
-                <div class="progress"><div class="inner-progress"></div></div>
-                <div class="more">
-                  <img
-                    class="img-thumbnail"
-                    src="../Assets/images/logo.png"
-                    alt=""
-                  />
-                  <img src="../Assets/icons/ellipsis.svg" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="project-card">
-              <div class="card-text">
-                <h3>Taskiro</h3>
-                <p>
-                  Texte explicatif qui dit en quoi consiste ce projet qui dure
-                  depuis plus de 2 ans
-                </p>
-              </div>
-              <div class="card-illustration">
-                <p>Progress <span>25%</span></p>
-                <div class="progress"><div class="inner-progress"></div></div>
-                <div class="more">
-                  <img
-                    class="img-thumbnail"
-                    src="../Assets/images/logo.png"
-                    alt=""
-                  />
-                  <img src="../Assets/icons/ellipsis.svg" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="project-card">
-              <div class="card-text">
-                <h3>Taskiro</h3>
-                <p>
-                  Texte explicatif qui dit en quoi consiste ce projet qui dure
-                  depuis plus de 2 ans
-                </p>
-              </div>
-              <div class="card-illustration">
-                <p>Progress <span>25%</span></p>
-                <div class="progress"><div class="inner-progress"></div></div>
-                <div class="more">
-                  <img
-                    class="img-thumbnail"
-                    src="../Assets/images/logo.png"
-                    alt=""
-                  />
-                  <img src="../Assets/icons/ellipsis.svg" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </body>
+    </body>
 </html>
