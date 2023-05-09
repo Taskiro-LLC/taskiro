@@ -4,6 +4,7 @@ const openModal = document.querySelector(".addProject") as HTMLElement;
 const updateModal = document.getElementById("updatebtn") as HTMLElement;
 const btn = document.querySelector("#addbtn") as HTMLElement;
 const updatePr = document.querySelector("#projectUpdate") as HTMLButtonElement;
+const usersList = document.querySelector(".lists")!;
 // const deleteBtnTask = document.querySelector("#deleteBtn") as HTMLImageElement;
 console.log(updateModal);
 
@@ -67,6 +68,7 @@ class TaskForm {
     const taskDescription = this.taskDescriptionInput.value;
     const taskDate = this.taskDateInput.value;
     const assignTo = this.assignToSelect.value;
+    this.showAvailableUsers();
 
     return {
       taskName,
@@ -75,6 +77,19 @@ class TaskForm {
       assignTo,
     };
   }
+  showAvailableUsers = async () => {
+    let select = document.querySelector("#users") as HTMLSelectElement;
+
+    let users = await getUsers("http://localhost:3000/users?engaged=false");
+
+    users.forEach((user) => {
+      let html = `<option value="${user.name}">${user.name}</option>`;
+
+      select.innerHTML += html;
+    });
+
+    console.log(select);
+  };
   async showTask() {
     const response = await fetch("http://localhost:3000/tasks");
     const allTask = (await response.json()) as task[];
@@ -94,7 +109,7 @@ ${alltask.taskDescription}        </p>
         <div class="more">
           <img
             class="img-thumbnail"
-            src="../Assets/images/logo.png"
+            src="https://robohash.org/${alltask.assignTo}?set=set4"
             alt=""
           />
           <div class="update-icons">
@@ -174,9 +189,41 @@ const createTask = async () => {
     },
   });
 };
+const getUsers = async (url: string): Promise<UserSignUp[]> => {
+  let users = await (await fetch(url)).json();
+
+  return users;
+};
+
+const showUsers = async () => {
+  let users = await getUsers("http://localhost:3000/users");
+
+  users.forEach((user) => {
+    let person = document.createElement("div");
+
+    person.classList.add("person");
+
+    person.innerHTML = `
+  
+        <div class="section1">
+  
+          <img src="https://robohash.org/${user.name}?set=set4" alt="" />
+  
+          <h3>${user.name}</h3>
+  
+        </div>
+  
+        <img src="../Assets/icons/trash.svg" alt="" />
+  
+      `;
+
+    usersList.appendChild(person);
+  });
+};
 
 btn.addEventListener("click", createTask);
 
 const myTask = new TaskForm();
 myTask.getTask();
 myTask.showTask();
+showUsers();

@@ -39,112 +39,89 @@
       "type": "user",
       "engaged": false,
       "id": 5
+    },
+    {
+      "name": "Alexmaingi",
+      "email": "maingi123@gmail.com",
+      "password": "1234567890",
+      "type": "user",
+      "engaged": false,
+      "id": 6
+    },
+    {
+      "name": "Alexmaingi",
+      "email": "Alexmaingi@gmail.com",
+      "password": "1234567890",
+      "type": "user",
+      "engaged": false,
+      "id": 7
     }
   ],
   "tasks": [
     {
-      "taskName": "Navbar",
-      "taskDescription": "3ertfghh",
-      "taskDate": "2023-05-09",
-      "assignTo": 2,
-      "progress": "complete",
-      "completedOn": "07/05/2023",
-      "id": 3
-    },
-    {
-      "taskName": "home page toog",
-      "taskDescription": "translatudfghjkvbnmfghjcvbn",
+      "taskName": "home page ",
+      "taskDescription": "hello world",
       "taskDate": "2023-05-09",
       "assignTo": "2",
       "id": 4
     },
     {
-      "taskName": "fghj",
-      "taskDescription": "gsyahcsk scsusc usgwcusc ",
-      "taskDate": "2023-05-21",
-      "assignTo": 2,
-      "progress": "complete",
-      "completedOn": "08/05/2023",
-      "id": 9
-    },
-    {
-      "taskName": "fghj",
-      "taskDescription": "gsyahcsk scsusc usgwcusc ",
-      "taskDate": "2023-05-21",
-      "assignTo": 2,
-      "progress": "complete",
-      "completedOn": "08/05/2023",
-      "id": 10
-    },
-    {
-      "taskName": "fghj",
-      "taskDescription": "gsyahcsk scsusc usgwcusc ",
-      "taskDate": "2023-05-21",
-      "assignTo": 1,
-      "progress": "incomplete",
-      "completedOn": null,
-      "id": 11
-    },
-    {
-      "taskName": "fghj",
-      "taskDescription": "gsyahcsk scsusc usgwcusc ",
-      "taskDate": "2023-05-21",
-      "assignTo": 1,
-      "progress": "incomplete",
-      "completedOn": null,
-      "id": 12
-    },
-    {
-      "taskName": "fghj",
-      "taskDescription": "gsyahcsk scsusc usgwcusc ",
-      "taskDate": "2023-05-21",
-      "assignTo": 1,
-      "progress": "incomplete",
-      "completedOn": null,
-      "id": 13
-    },
-    {
-      "taskName": "fghj",
-      "taskDescription": "gsyahcsk scsusc usgwcusc ",
-      "taskDate": "2023-05-21",
-      "assignTo": 1,
-      "progress": "incomplete",
-      "completedOn": null,
-      "id": 14
-    },
-    {
-      "taskName": "refg",
-      "taskDescription": "fghgjh",
-      "taskDate": "2023-05-22",
-      "assignTo": 1,
-      "progress": "incomplete",
-      "completedOn": null,
-      "id": 15
-    },
-    {
-      "taskName": "egrethtrj",
-      "taskDescription": "qewetjt wrjtjfg",
-      "taskDate": "2023-05-04",
-      "assignTo": 1,
-      "progress": "incomplete",
-      "completedOn": null,
-      "id": 16
-    },
-    {
-      "taskName": "werghjk",
-      "taskDescription": "sdfghjkl",
-      "taskDate": "2023-05-23",
-      "assignTo": 4,
-      "progress": "incomplete",
-      "completedOn": null,
-      "id": 17
-    },
-    {
       "taskName": "Navbar",
-      "taskDescription": "ul;",
+      "taskDescription": "ul links\n",
       "taskDate": "2023-06-02",
       "assignTo": "4",
       "id": 12
+    },
+    {
+      "taskName": "landing",
+      "taskDescription": "landing page",
+      "taskDate": "",
+      "assignTo": "1",
+      "id": 13,
+      "progress": "complete",
+      "completedOn": "5/9/2023"
+    },
+    {
+      "taskName": "footer",
+      "taskDescription": "page footer",
+      "taskDate": "",
+      "assignTo": "1",
+      "id": 14
+    },
+    {
+      "taskName": "button",
+      "taskDescription": "login button\n",
+      "taskDate": "",
+      "assignTo": "1",
+      "id": 15
+    },
+    {
+      "taskName": "navbar",
+      "taskDescription": "landing page navbar",
+      "taskDate": "",
+      "assignTo": "1",
+      "id": 16
+    },
+    {
+      "taskName": "cards",
+      "taskDescription": "home page cards",
+      "taskDate": "",
+      "assignTo": "1",
+      "id": 17
+    },
+    {
+      "taskName": "login page",
+      "taskDescription": "user login page",
+      "taskDate": "",
+      "assignTo": "3",
+      "id": 18
+    },
+    {
+      "taskName": "",
+      "taskDescription": "",
+      "taskDate": "",
+      "assignTo": "Alex Maingi",
+      "id": 19
     }
   ]
 }
