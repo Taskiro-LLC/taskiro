@@ -1,63 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Taskiro - Sign In</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="./sign-in.css" />
-  </head>
-  <body>
-    <main>
-      <div class="login-card">
-        <img src="../Assets/images/logo.png" alt="" />
-        <div class="form">
-          <h4>SIGN IN</h4>
-          <label for="email" placeholder="sample@gmail.com"
-            >Email Address</label
-          >
-          <input
-            type="email"
-            placeholder="enter email"
-            name="login"
-            id="email"
-          />
-          <label for="password">Password</label>
-          <input
-            type="password"
-            placeholder="enter password"
-            name="login"
-            id="password"
-          />
-          <p class="forgot-password">Forgot password?</p>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Taskiro - Sign In</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="../style.css" />
+        <link rel="stylesheet" href="./sign-in.css" />
+        <script src="../dist/sign-in/sign-in.js" defer></script>
+    </head>
+    <body>
+        <main>
+            <div class="login-card">
+                <img src="../Assets/images/logo.png" alt="" />
+                <div class="form">
+                    <h4>SIGN IN</h4>
+                    <label for="email" placeholder="sample@gmail.com"
+                        >Email Address</label
+                    >
+                    <input
+                        type="email"
+                        placeholder="enter email"
+                        name="login"
+                        id="email" />
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        placeholder="enter password"
+                        name="login"
+                        id="password" />
+                        <p class="mismatched">That wasn't correct🤪. Try again!</p>
+                    <label  class="forgot-password" for="forgot-password">
+                        <p >Forgot password?</p>
+                    </label>
 
-          <div class="login-cta">
-            <button class="login-btn">Sign In</button>
-          </div>
-          <hr />
-          <span> Forgot password? </span>
+                    <div class="login-cta">
+                        <button class="login-btn">Sign In</button>
+                        <a href="../sign-up/sign-up.html"
+                            >Have an Account?<br />Sign In</a
+                        >
+                    </div>
+                    <hr />
+                    <span> Forgot password? </span>
 
-          <label for="confirm-password">Email Address</label>
-          <input
-            type="email"
-            placeholder="enter email"
-            name="login"
-            id="confirm-password"
-          />
-        </div>
-        <div class="continue-cta">
-          <button class="continue-btn">Continue</button>
-        </div>
-      </div>
-      <div class="tagline">
-        <h2>
-          A single app, <br />
-          an entire ecosystem!
-        </h2>
-      </div>
-      <img src="../Assets/images/logo-big.svg" alt="logo" class="logo-big" />
-    </main>
-  </body>
+                    <label for="confirm-password">Email Address</label>
+                    <input
+                        type="email"
+                        placeholder="enter email"
+                        name="login"
+                        id="forgot-password" />
+                </div>
+                <div class="continue-cta">
+                    <button class="continue-btn">Continue</button>
+                </div>
+            </div>
+            <div class="tagline">
+                <h2>
+                    A single app, <br />
+                    an entire ecosystem!
+                </h2>
+            </div>
+            <img
+                src="../Assets/images/logo-big.svg"
+                alt="logo"
+                class="logo-big" />
+        </main>
+    </body>
 </html>
